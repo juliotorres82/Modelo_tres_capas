@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta de Consumo de Frutas</title>
+    <link rel="stylesheet" href="miestilo.css">
+</head>
+<body>
+    
+    <form id="miFormulario" action="/guardarRespuestas" method="post">
+        <h1>Encuesta de Consumo de Frutas</h1>
+        <h2 id="pregunta1">Pregunta 1: ¿Cuántas porciones de frutas consumes al día?</h2>
+        <input type="number" name="pregunta1" min="0">
+        
+        <h2 id="pregunta2">Pregunta 2: ¿Cuál es tu fruta favorita?</h2>
+        <input type="text" name="pregunta2">
+        
+        <h2 id="pregunta3">Pregunta 3: ¿Con qué frecuencia comes frutas frescas?</h2>
+        <select name="pregunta3">
+            <option value="diario">Diariamente</option>
+            <option value="semanal">Semanalmente</option>
+            <option value="mensual">Mensualmente</option>
+            <option value="raramente">Raramente</option>
+        </select>
+
+        <h2 id="pregunta4">Pregunta 4: ¿Prefieres frutas frescas o enlatadas?</h2>
+        <input type="radio" name="pregunta4" value="frescas"> Frescas
+        <input type="radio" name="pregunta4" value="enlatadas"> Enlatadas<br>
+
+        <h2 id="pregunta5">Pregunta 5: ¿Te gustan los jugos frutales?</h2>
+        <input type="radio" name="pregunta5" value="si"> Sí
+        <input type="radio" name="pregunta5" value="no"> No<br>
+
+        <h2 id="pregunta6">Pregunta 6: ¿Con qué frecuencia bebes jugos de frutas?</h2>
+        <select name="pregunta6">
+            <option value="diario">Diariamente</option>
+            <option value="semanal">Semanalmente</option>
+            <option value="mensual">Mensualmente</option>
+            <option value="raramente">Raramente</option>
+        </select>
+
+        <h2 id="pregunta7">Pregunta 7: ¿Prefieres frutas frescas o frutas enlatadas en tus jugos?</h2>
+        <input type="radio" name="pregunta7" value="frescas"> Frescas
+        <input type="radio" name="pregunta7" value="enlatadas"> Enlatadas<br>
+
+        <h2 id="pregunta8">Pregunta 8: ¿Has probado frutas exóticas?</h2>
+        <input type="radio" name="pregunta8" value="si"> Sí
+        <input type="radio" name="pregunta8" value="no"> No<br>
+
+        <h2 id="pregunta9">Pregunta 9: ¿Cuál es tu fruta exótica favorita?</h2>
+        <input type="text" name="pregunta9">
+
+        <h2 id="pregunta10">Pregunta 10: ¿Te gustaría aprender a preparar recetas con frutas?</h2>
+        <input type="radio" name="pregunta10" value="si"> Sí
+        <input type="radio" name="pregunta10" value="no"> No<br>
+
+        <h2 id="pregunta11">Pregunta 11: ¿Cuál es tu postre de frutas favorito?</h2>
+        <input type="text" name="pregunta11">
+
+        <h2 id="pregunta12">Pregunta 12: ¿Conoces los beneficios para la salud de comer frutas?</h2>
+        <input type="radio" name="pregunta12" value="si"> Sí
+        <input type="radio" name="pregunta12" value="no"> No<br>
+
+        <h2 id="pregunta13">Pregunta 13: ¿Consumes frutas como parte de tus comidas principales?</h2>
+        <input type="radio" name="pregunta13" value="si"> Sí
+        <input type="radio" name="pregunta13" value="no"> No<br>
+
+        <h2 id="pregunta14">Pregunta 14: ¿Has participado en alguna dieta que incluya frutas?</h2>
+        <input type="radio" name="pregunta14" value="si"> Sí
+        <input type="radio" name="pregunta14" value="no"> No<br>
+
+        <h2 id="pregunta15">Pregunta 15: ¿Tienes alguna sugerencia o comentario sobre el consumo de frutas?</h2>
+        <textarea name="pregunta15" rows="4" cols="50"></textarea>
+
+        <div>
+            <input type="submit" value="Enviar">
+            <button type="button" onclick="limpiarFormulario()">Limpiar</button>
+        </div>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
