@@ -27,6 +27,22 @@ app.post('/guardarRespuestas',(req,res)=> {
   res.end('Respuestas guardadas con éxito.');
 });
 
+
+// Peticion para actualizar la respuesta
+app.post('/actualizarRespuestas',(req,res)=> {
+  const respuesta = {
+    id: 0,
+    nombre: req.body.nombre,
+    edad: req.body.edad,
+    p1: req.body.p1,
+    p2: req.body.p2,
+    p3: req.body.p3
+  }
+  model.actualizar(respuesta)
+  res.writeHead(200, { 'Content-Type': 'text/plain' });
+  res.end('Respuestas actualizadas con éxito.');
+});
+
 app.listen(port, () => {
   console.log(`Servidor en ejecución en http://localhost:${port}`);
 });
