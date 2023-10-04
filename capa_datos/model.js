@@ -17,6 +17,13 @@ function respuestas() {
     return leer().respuestas;
 }
 
+// Devuelve una respuesta por id
+function respuesta(id) {
+    const respuestas = leer().respuestas;
+    const indice = respuestas.findIndex(respuesta => respuesta.id == id);
+    return respuestas[indice]
+}
+
 // Crea una nueva respuesta
 function nuevaRespuesta(respuesta) {
     datos = leer();
@@ -32,9 +39,9 @@ function actualizar(nuevaRespuesta){
     
     //indice que coincida con la posición del id solicitado
     const indice = respuestas.findIndex(respuesta => respuesta.id == nuevaRespuesta.id);
-
+    
     //Si existe el id actualiza
-    if (indice != -1) {
+    if (indice !== -1) {
         // Actualizar la respuesta reemplazando a las anteriores
         respuestas[indice] = nuevaRespuesta
         escribir(datos);
@@ -67,5 +74,6 @@ module.exports = {
     respuestas,
     nuevaRespuesta,
     actualizar,
-    eliminar
+    eliminar,
+    respuesta
 }

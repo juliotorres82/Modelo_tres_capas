@@ -1,9 +1,6 @@
 body {
-    font-family: Arial, sans-serif;
     background-image: url("frutas.jpg");
-    margin: 0;
-    padding: 20px;
-    font-size: 13px;
+    background-size: cover;
 }
 
 @media (max-width: 500px) {
@@ -12,65 +9,8 @@ body {
   }
 }
 
-h1 {
-    text-align: center;
-    color: #333;
-}
-
-form {
-    /*
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    */
-
-    max-width: 80%;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    background-color: hsl(49, 100%, 89%);
-}
-
-h2 {
-    color: #333;
-}
-
-input[type="number"],
-input[type="text"],
-select,
-textarea {
-    width: 90%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    
-}
-
-input[type="radio"] {
-    margin-right: 10px;
-}
-
-input[type="submit"],
-button {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-input[type="submit"]:hover {
-    background-color: #555;
-}
-
-button:hover {
-    background-color: #555;
-}
-
-div{
-    text-align: center;
+.formulario {
+    background-color: white;
+    padding: 20px; /* Añadir relleno para separar el contenido del formulario del fondo de la página */
+    border-radius: 10px; /* Opcional: Agregar bordes redondeados al formulario */
 }
