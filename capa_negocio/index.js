@@ -47,7 +47,7 @@ app.post('/peticion/guardar',(req,res) => {
     p3: req.body.p3
   }
   model.nuevaRespuesta(respuesta);
-  res.redirect('http://localhost:3000/');
+  res.redirect('https://servicio-web-nck9.onrender.com/');
 });
 
 // Peticion para actualizar la respuesta
@@ -61,7 +61,7 @@ app.post('/peticion/actualizar',(req,res) => {
     p3: req.body.p3
   }
   if (model.actualizar(respuesta)) {
-    res.redirect('http://localhost:3000/');
+    res.redirect('https://servicio-web-nck9.onrender.com/');
   } else {
     res.writeHead(400, { 'Content-Type': 'text/plain' });
     res.end('Id no encontrado');
@@ -72,7 +72,7 @@ app.post('/peticion/actualizar',(req,res) => {
 app.get('/peticion/eliminar', (req, res) => {
   const id = req.query.id;
   if (model.eliminar(id)) {
-    res.redirect('http://localhost:3000/');
+    res.redirect('https://servicio-web-nck9.onrender.com/');
   } else {
     res.writeHead(400, { 'Content-Type': 'text/plain' });
     res.end('Id no encontrado');

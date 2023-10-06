@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    fetch('http://localhost:3000/peticion/respuesta'+window.location.search)
+    fetch('https://servicio-web-nck9.onrender.com/peticion/respuesta'+window.location.search)
       .then((response) => {
         if (!response.ok) {
           throw new Error('La solicitud no fue exitosa');
